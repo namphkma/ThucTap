@@ -22,7 +22,7 @@ public class TemplateDto {
     private String mobilePreview;
 
 
-    public void validate(){
+    public void validate() {
 
         validateUser();
 
