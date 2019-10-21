@@ -12,6 +12,6 @@ public class ExceptionHandler {
     @org.springframework.web.bind.annotation.ExceptionHandler({BadRequestException.class})
     public ResponseEntity<ExeptionResponse> handlerBadRequestExceoption(BadRequestException e){
         ExeptionResponse response = new ExeptionResponse(e.getMessage(),e.getCode().value());
-        return new ResponseEntity<ExeptionResponse>(response,HttpStatus.BAD_REQUEST);
+        return new ResponseEntity<>(response,HttpStatus.BAD_REQUEST);
     }
 }

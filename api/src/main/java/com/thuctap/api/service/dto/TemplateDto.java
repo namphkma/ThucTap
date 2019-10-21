@@ -21,6 +21,69 @@ public class TemplateDto {
     private String desktopPreview;
     private String mobilePreview;
 
+    public static String getImagePattern() {
+        return IMAGE_PATTERN;
+    }
+
+    public static String getPdfPattern() {
+        return PDF_PATTERN;
+    }
+
+    public UserDto getOwner() {
+        return owner;
+    }
+
+    public void setOwner(UserDto owner) {
+        this.owner = owner;
+    }
+
+    public String getTermFile() {
+        return termFile;
+    }
+
+    public void setTermFile(String termFile) {
+        this.termFile = termFile;
+    }
+
+    public String getPolicyFile() {
+        return policyFile;
+    }
+
+    public void setPolicyFile(String policyFile) {
+        this.policyFile = policyFile;
+    }
+
+    public String getBackground() {
+        return background;
+    }
+
+    public void setBackground(String background) {
+        this.background = background;
+    }
+
+    public String getLogo() {
+        return logo;
+    }
+
+    public void setLogo(String logo) {
+        this.logo = logo;
+    }
+
+    public String getDesktopPreview() {
+        return desktopPreview;
+    }
+
+    public void setDesktopPreview(String desktopPreview) {
+        this.desktopPreview = desktopPreview;
+    }
+
+    public String getMobilePreview() {
+        return mobilePreview;
+    }
+
+    public void setMobilePreview(String mobilePreview) {
+        this.mobilePreview = mobilePreview;
+    }
 
     public void validate() {
 
@@ -65,7 +128,7 @@ public class TemplateDto {
             throw  new BadRequestException("Owner cannot be null");
         }
         if(Objects.isNull(owner.getEmail())){
-            throw  new BadRequestException(" Owner's Email cannot be null");
+            throw  new BadRequestException("Owner's Email cannot be null");
         }
         if(Objects.isNull(owner.getName())){
             throw  new BadRequestException("Owner's Name cannot be null");

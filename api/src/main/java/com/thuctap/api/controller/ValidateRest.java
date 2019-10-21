@@ -15,7 +15,7 @@ public class ValidateRest {
     private ValidateService validateService;
 
     @PostMapping("/template")
-    public ResponseEntity<TemplateDto> createTemplate(@RequestBody TemplateDto templateDto) throws BadRequestException {
+    public ResponseEntity<TemplateDto> createTemplate(@RequestBody TemplateDto templateDto) {
         return new ResponseEntity(validateService.insertTemplate(templateDto),HttpStatus.CREATED);
     }
 }
